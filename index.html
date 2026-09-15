@@ -617,6 +617,97 @@
       .stats-row { grid-template-columns: repeat(2, 1fr); }
       header { padding: 1rem 1.5rem; }
     }
+  
+    /* ── Segment / Variant Matrix ── */
+    .segment-matrix-wrap { margin: 2.5rem 0; }
+    .matrix-section-title { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem; letter-spacing: -0.2px; }
+    .segment-matrix { overflow-x: auto; }
+    .matrix-table { width: 100%; }
+    .matrix-table th { text-align: center; }
+    .matrix-table th:first-child { text-align: left; min-width: 160px; }
+    .tier-header { min-width: 160px; }
+    .tier-label { white-space: nowrap; padding: 1rem 1.25rem !important; vertical-align: middle !important; text-align: left !important; }
+    .tier-name { font-size: 13px; font-weight: 700; color: var(--text-dark); display: block; }
+    .tier-price { font-size: 11px; color: var(--accent-dark); font-weight: 600; }
+    .seg-tag { display: inline-block; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.3px; white-space: nowrap; }
+    .seg-primary { background: var(--primary); color: white; }
+    .seg-secondary { background: var(--primary-light); color: var(--primary); border: 1px solid rgba(30,58,95,0.25); }
+    .seg-none { color: var(--text-gray); background: none; font-size: 16px; padding: 0.3rem; font-weight: 400; }
+    .matrix-table td { text-align: center; vertical-align: middle; }
+    .matrix-table td:first-child { text-align: left; }
+    .matrix-legend { display: flex; gap: 1.5rem; align-items: center; margin: 1rem 0; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 12px; color: var(--text-gray); }
+    .matrix-note { font-size: 13px; color: var(--text-mid); margin-top: 0.75rem; line-height: 1.7; }
+    .variant-tag { display: inline-block; background: var(--primary); color: white; font-size: 10px; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px; margin-right: 0.4rem; letter-spacing: 0.5px; }
+    .price-cell { font-size: 12px; font-weight: 700; color: var(--accent-dark); white-space: nowrap; }
+    .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    @media (max-width: 768px) { .two-col-grid { grid-template-columns: 1fr; } }
+  
+    /* ── Visual Market / Variant Grid (screenshot style) ── */
+    .mktviz-outer { margin: 3rem 0; }
+    .mktviz-title {
+      font-size: 19px; font-weight: 700;
+      color: var(--accent-dark);
+      text-align: center; margin-bottom: 2rem;
+      letter-spacing: 0.4px;
+    }
+
+    .mktviz-pr-label-row { display: flex; margin-bottom: 0.4rem; }
+    .mktviz-pr-spacer   { width: 155px; flex-shrink: 0; }
+    .mktviz-pr-text     { font-size: 10.5px; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.6px; }
+
+    .mktviz-row         { display: flex; align-items: stretch; }
+    .mktviz-row-label   {
+      width: 155px; flex-shrink: 0;
+      display: flex; flex-direction: column; justify-content: center;
+      padding-right: 1.25rem; text-align: right;
+    }
+    .mktviz-row-tier  { font-size: 13px; font-weight: 700; color: var(--text-dark); display: block; font-style: italic; }
+    .mktviz-row-price { font-size: 11.5px; color: var(--text-gray); display: block; font-style: italic; }
+
+    .mktviz-cells-row {
+      display: flex; flex: 1;
+      border-top: 1px solid #c0cede;
+    }
+    .mktviz-row:last-of-type .mktviz-cells-row { border-bottom: 1px solid #c0cede; }
+
+    .mktviz-cell {
+      flex: 1;
+      border-right: 1px solid #c0cede;
+      padding: 1.25rem 1rem;
+      min-height: 145px;
+      background: #ffffff;
+    }
+    .mktviz-cells-row .mktviz-cell:first-child { border-left: 1px solid #c0cede; }
+    .mktviz-cell-none {
+      display: flex; align-items: center; justify-content: center;
+      background: #f8fafc;
+    }
+    .mktviz-cell-none-dash { font-size: 22px; color: #c8d4e0; }
+    .mktviz-cell-primary   { background: rgba(30,58,95,0.03); }
+    .mktviz-cell-secondary { background: rgba(245,158,11,0.03); }
+
+    .mktviz-badge { display: inline-block; font-size: 9.5px; font-weight: 700; padding: 0.18rem 0.6rem; border-radius: 20px; margin-bottom: 0.55rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .mktviz-badge-primary   { background: var(--primary); color: white; }
+    .mktviz-badge-secondary { background: var(--primary-light); color: var(--primary); border: 1px solid rgba(30,58,95,0.2); }
+    .mktviz-badge-variant   { background: var(--accent); color: white; }
+
+    .mktviz-cell-name { font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.35rem; line-height: 1.4; }
+    .mktviz-cell-desc { font-size: 11.5px; color: var(--text-gray); line-height: 1.65; margin-bottom: 0.5rem; }
+    .mktviz-cell-vol  {
+      display: inline-block; font-size: 10px; font-weight: 700;
+      color: var(--accent-dark); background: var(--accent-light);
+      border: 1px solid rgba(245,158,11,0.28); padding: 0.15rem 0.55rem;
+      border-radius: 20px; margin-top: 0.2rem;
+    }
+
+    .mktviz-x-row    { display: flex; margin-top: 0.7rem; align-items: flex-start; }
+    .mktviz-x-spacer { width: 155px; flex-shrink: 0; }
+    .mktviz-x-labels { display: flex; flex: 1; }
+    .mktviz-x-label  { flex: 1; text-align: center; font-size: 13px; color: var(--text-dark); font-weight: 600; padding: 0.3rem; line-height: 1.4; }
+    .mktviz-x-title  { font-size: 13px; font-weight: 700; color: var(--text-dark); padding: 0.3rem 0 0.3rem 1rem; white-space: nowrap; }
+
+    .mktviz-note { font-size: 12.5px; color: var(--text-mid); margin-top: 1.25rem; line-height: 1.7; }
   </style>
 </head>
 <body>
@@ -666,13 +757,13 @@
     <div class="decisions-grid">
       <div class="decision-card">
         <div class="decision-number">01</div>
-        <div class="decision-title">Market Segments</div>
-        <div class="decision-desc">Why Construction launches first, and why Florist and Cleaning follow in Year 2.</div>
+        <div class="decision-title">Strategic Intent</div>
+        <div class="decision-desc">Revenue growth through sequenced market entry and product variants.</div>
       </div>
       <div class="decision-card">
         <div class="decision-number">02</div>
-        <div class="decision-title">Strategic Intent</div>
-        <div class="decision-desc">Revenue growth through sequenced market entry and product variants.</div>
+        <div class="decision-title">Market Segments</div>
+        <div class="decision-desc">Why Construction launches first, and why Florist and Cleaning follow in Year 2.</div>
       </div>
       <div class="decision-card">
         <div class="decision-number">03</div>
@@ -691,28 +782,89 @@
       </div>
       <div class="decision-card">
         <div class="decision-number">06</div>
-        <div class="decision-title">Revenue Projection & Path to Profitability</div>
-        <div class="decision-desc">Five-year projected revenue and the Year 1.5 break-even milestone</div>
+        <div class="decision-title">Market Variant Plan & Planned Volumes</div>
+        <div class="decision-desc">Adoption targets by segment and tier &mdash; a roadmap from pilot to scale.</div>
       </div>
       <div class="decision-card">
         <div class="decision-number">07</div>
-        <div class="decision-title">Expected Variants & Adoption</div>
-        <div class="decision-desc">Planned variants, launch timing, and projected attach rates.</div>
+        <div class="decision-title">Planning Horizon & Architectural Stability</div>
+        <div class="decision-desc">2&ndash;3 year horizon: stable platform foundation, flexible AI tool layer.</div>
       </div>
       <div class="decision-card">
         <div class="decision-number">08</div>
-        <div class="decision-title">Shared Parts Architecture (DSM)</div>
-        <div class="decision-desc">A dependency view of the platform: limits variant sprawl.</div>
+        <div class="decision-title">Define Sharing Strategy</div>
+        <div class="decision-desc">Platform-module sharing: shared infrastructure, customer-specific data.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Decision 1: Market Segments -->
-<section id="segments">
+<!-- Decision 1: Strategic Intent -->
+<section>
   <div class="container">
     <div class="section-header">
       <p class="decision-label">Decision 01 of 08</p>
+      <h2 class="section-title">Strategic Intent</h2>
+      <p class="section-subtitle">Revenue growth through two levers: entering new markets in sequence, and deepening each market with product variants.</p>
+    </div>
+
+    <!-- Selected vs Not Selected -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 2rem 0;">
+      <div style="background: var(--primary); border-radius: var(--radius); padding: 1.5rem 1.75rem; display: flex; align-items: flex-start; gap: 1rem; box-shadow: var(--shadow-md);">
+        <span style="font-size: 20px; color: var(--accent); flex-shrink: 0; line-height: 1.4;">&#10003;</span>
+        <div>
+          <div style="font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem;">Selected</div>
+          <div style="font-size: 15px; font-weight: 700; color: white; margin-bottom: 0.35rem;">New Markets &amp; Revenue</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.72); line-height: 1.6;">Pursue growth through new customer segments and product variants — not cost-cutting.</div>
+        </div>
+      </div>
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1.5rem 1.75rem; display: flex; align-items: flex-start; gap: 1rem; opacity: 0.5;">
+        <span style="font-size: 20px; color: var(--text-gray); flex-shrink: 0; line-height: 1.4;">&#10007;</span>
+        <div>
+          <div style="font-size: 10px; font-weight: 700; color: var(--text-gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem;">Not Selected</div>
+          <div style="font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.35rem;">Cost Savings</div>
+          <div style="font-size: 12px; color: var(--text-gray); line-height: 1.6;">Reduce costs on existing operations.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why SkillMate -->
+    <div style="background: var(--primary-light); border-radius: var(--radius); padding: 1.75rem 2rem; margin: 2rem 0; border: 1px solid rgba(30,58,95,0.1);">
+      <p style="font-size: 10.5px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.1rem;">Why SkillMate?</p>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; gap: 0.875rem; align-items: flex-start;">
+          <span style="color: var(--accent-dark); font-weight: 800; flex-shrink: 0; margin-top: 2px;">&#8594;</span>
+          <p style="font-size: 14px; color: var(--text-mid); line-height: 1.75; margin: 0;">AI tools are multiplying fast, but users can&rsquo;t identify the right ones or combine them effectively.</p>
+        </div>
+        <div style="display: flex; gap: 0.875rem; align-items: flex-start;">
+          <span style="color: var(--accent-dark); font-weight: 800; flex-shrink: 0; margin-top: 2px;">&#8594;</span>
+          <p style="font-size: 14px; color: var(--text-mid); line-height: 1.75; margin: 0;">SkillMate builds a new <strong style="color: var(--primary);">AI enablement layer</strong> between AI tool developers and everyday users.</p>
+        </div>
+        <div style="display: flex; gap: 0.875rem; align-items: flex-start;">
+          <span style="color: var(--accent-dark); font-weight: 800; flex-shrink: 0; margin-top: 2px;">&#8594;</span>
+          <p style="font-size: 14px; color: var(--text-mid); line-height: 1.75; margin: 0;"><strong style="color: var(--primary);">Revenue streams:</strong> subscriptions, AI setup/onboarding support, premium coaching, and future tool-provider partnerships.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strategic Intent callout -->
+    <div style="background: #1e3a5f; border-radius: var(--radius); padding: 1.75rem 2rem; margin: 2rem 0;">
+      <p style="font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem;">Strategic Intent</p>
+      <p style="color: white; font-size: 16px; font-weight: 600; line-height: 1.65; margin: 0;">Turn fragmented AI tools into simple, personalized solutions for <strong style="color: var(--accent);">students, startups, and small businesses</strong>.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>The stated goal:</strong> Reach <strong>$2M ARR by Year 3</strong> by pairing market entry (Construction &rarr; Florist &rarr; Cleaning) with a variant roadmap that raises revenue per customer over time.</p>
+    </div>
+
+
+  </div>
+</section>
+<!-- Decision 2: Market Segments -->
+<section id="segments">
+  <div class="container">
+    <div class="section-header">
+      <p class="decision-label">Decision 02 of 08</p>
       <h2 class="section-title">Market Segments</h2>
       <p class="section-subtitle">Three durable, manageable segments — entered in sequence, each chosen for a distinct demand pattern.</p>
     </div>
@@ -752,42 +904,115 @@
     <div class="highlight-box">
       <p><strong>Why these segments stay manageable:</strong> Each segment is durable — demand for repairs, flowers, and cleaning does not disappear. Construction, Florist, and Cleaning differs not in fundamental workflows but in configuration, not in kind. Sequenced entry (Construction in Year 1, Florist and Cleaning in Year 2) lets the team prove the platform on one high-pain segment before scaling to seasonal and volume-driven models.</p>
     </div>
-  </div>
-</section>
 
-<!-- Decision 2: Strategic Intent -->
-<section>
-  <div class="container">
-    <div class="section-header">
-      <p class="decision-label">Decision 02 of 08</p>
-      <h2 class="section-title">Strategic Intent</h2>
-      <p class="section-subtitle">Revenue growth through two levers: entering new markets in sequence, and deepening each market with product variants.</p>
-    </div>
+    
+    <div class="mktviz-outer">
+      <div class="mktviz-title">Market Segment Grid</div>
 
-    <div class="highlight-box">
-      <p><strong>The stated goal:</strong> Reach <strong>$2M ARR by Year 3</strong> by pairing market entry (Construction → Florist → Cleaning) with a variant roadmap that raises revenue per customer over time.</p>
-    </div>
-
-    <div class="stats-row">
-      <div class="stat-box">
-        <div class="stat-label">Year 1</div>
-        <h3 style="font-size: 18px; font-weight: 700; color: var(--text-dark); margin: 0.75rem 0;">Enter with Construction</h3>
-        <p style="font-size: 12px; color: var(--text-gray);">SkillMate AI launches with phone assistance for contractors — the highest-pain segment — and proves the core platform.</p>
+      <!-- Price Range header label -->
+      <div class="mktviz-pr-label-row">
+        <div class="mktviz-pr-spacer"></div>
+        <span class="mktviz-pr-text">Price Range</span>
       </div>
-      <div class="stat-box">
-        <div class="stat-label">Year 2</div>
-        <h3 style="font-size: 18px; font-weight: 700; color: var(--text-dark); margin: 0.75rem 0;">Expand to Florist & Cleaning</h3>
-        <p style="font-size: 12px; color: var(--text-gray);">The same core extends to seasonal-peak (Florist) and volume-play (Cleaning) segments through configuration and add-on variants.</p>
-      </div>
-      <div class="stat-box">
-        <div class="stat-label">Year 3</div>
-        <h3 style="font-size: 18px; font-weight: 700; color: var(--text-dark); margin: 0.75rem 0;">Scale variants to $2M ARR</h3>
-        <p style="font-size: 12px; color: var(--text-gray);">Add-on variants — estimation, smart scheduling, seasonal assist, multi-location — deepen revenue per customer toward the stated goal.</p>
-      </div>
-    </div>
 
-    <div class="highlight-box" style="background: #1e3a5f; border-color: #1e3a5f; color: white;">
-      <p style="color: white;"><strong style="color: #e8f0f8;">Why variants, not new products:</strong> Each variant reuses the shared platform—AI call handling, scheduling, customer data, integrations—and adds unique logic only where a segment demands it. That keeps marginal cost per new capability low and lets revenue grow faster than engineering headcount.</p>
+      <!-- Row: Enterprise -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">Enterprise</span>
+          <span class="mktviz-row-price">$999+/mo</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-secondary">
+            <span class="mktviz-badge mktviz-badge-secondary">Secondary</span>
+            <div class="mktviz-cell-name">Multi-Site Contractors</div>
+            <div class="mktviz-cell-desc">3+ crew firms needing AI call routing, project estimation &amp; multi-location support.</div>
+          </div>
+          <div class="mktviz-cell mktviz-cell-none">
+            <span class="mktviz-cell-none-dash">—</span>
+          </div>
+          <div class="mktviz-cell mktviz-cell-secondary">
+            <span class="mktviz-badge mktviz-badge-secondary">Secondary</span>
+            <div class="mktviz-cell-name">Multi-Branch Chains</div>
+            <div class="mktviz-cell-desc">Multi-location cleaning operators requiring route dispatch, dedicated advisor &amp; analytics.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: Pro -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">Pro</span>
+          <span class="mktviz-row-price">$299/mo</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-primary">Primary</span>
+            <div class="mktviz-cell-name">Mid-Size Contractors</div>
+            <div class="mktviz-cell-desc">AI call handling, smart scheduling, CRM &amp; 2 hrs/mo consultant. Core Year 1 beachhead.</div>
+          </div>
+          <div class="mktviz-cell mktviz-cell-secondary">
+            <span class="mktviz-badge mktviz-badge-secondary">Secondary</span>
+            <div class="mktviz-cell-name">Established Florists</div>
+            <div class="mktviz-cell-desc">High seasonal volume shops needing AI call coverage, event workflows &amp; consultant support (Year 2).</div>
+          </div>
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-primary">Primary</span>
+            <div class="mktviz-cell-name">Cleaning Operators</div>
+            <div class="mktviz-cell-desc">AI call + crew-aware dispatch, smart scheduling &amp; 2 hrs/mo consultant. Core Year 1 beachhead.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: Starter -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">Starter</span>
+          <span class="mktviz-row-price">$99/mo</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-primary">Primary</span>
+            <div class="mktviz-cell-name">Small Contractors</div>
+            <div class="mktviz-cell-desc">Solo or 1–2 crew contractors starting with AI phone assist, basic scheduling &amp; lead capture.</div>
+          </div>
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-primary">Primary</span>
+            <div class="mktviz-cell-name">Independent Florists</div>
+            <div class="mktviz-cell-desc">Single-location florists automating order intake, appointment booking &amp; customer follow-up.</div>
+          </div>
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-primary">Primary</span>
+            <div class="mktviz-cell-name">Small Cleaning Ops</div>
+            <div class="mktviz-cell-desc">Residential cleaners using AI to handle bookings, team notifications &amp; basic route planning.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: Free -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">Explorer</span>
+          <span class="mktviz-row-price">Free</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-none"><span class="mktviz-cell-none-dash">—</span></div>
+          <div class="mktviz-cell mktviz-cell-none"><span class="mktviz-cell-none-dash">—</span></div>
+          <div class="mktviz-cell mktviz-cell-none"><span class="mktviz-cell-none-dash">—</span></div>
+        </div>
+      </div>
+
+      <!-- X-axis labels -->
+      <div class="mktviz-x-row">
+        <div class="mktviz-x-spacer"></div>
+        <div class="mktviz-x-labels">
+          <div class="mktviz-x-label">Construction</div>
+          <div class="mktviz-x-label">Florist</div>
+          <div class="mktviz-x-label">Cleaning</div>
+        </div>
+        <div class="mktviz-x-title">Market Segment</div>
+      </div>
+
+      <p class="mktviz-note"><strong>Beachhead:</strong> Construction &amp; Cleaning on Pro/Starter in Year 1. Florist added in Year 2. Enterprise tier opens as segments mature past the pilot cohort.</p>
     </div>
   </div>
 </section>
@@ -1023,213 +1248,320 @@
   </div>
 </section>
 
-<!-- Decision 6: Revenue Projection -->
+<!-- Decision 6: Market Variant Plan -->
 <section>
   <div class="container">
     <div class="section-header">
       <p class="decision-label">Decision 06 of 08</p>
-      <h2 class="section-title">Revenue Projection & Path to Profitability</h2>
-      <p class="section-subtitle">A five-year projected path from launch revenue to $4.5M+ — every figure an estimate.</p>
+      <h2 class="section-title">Market Variant Plan &amp; Planned Volumes</h2>
+      <p class="section-subtitle">Product variants plotted against the market segments from Decision 2 — with estimated volume fractions for each intersection.</p>
     </div>
 
-    <div class="chart-placeholder">
-      <p style="color: var(--text-gray); font-style: italic;">Projected Annual Recurring Revenue (Y1–Y5): $150K → $600K → $2M → $3.2M → $4.5M+</p>
+    <div class="mktviz-outer">
+      <div class="mktviz-title">Product Variant Grid</div>
+
+      <!-- Price Range label -->
+      <div class="mktviz-pr-label-row">
+        <div class="mktviz-pr-spacer"></div>
+        <span class="mktviz-pr-text">Pricing Tier / Variant</span>
+      </div>
+
+      <!-- Row: V4 Enterprise -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">V4 &mdash; Enterprise</span>
+          <span class="mktviz-row-price">$999+/mo</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-secondary">
+            <span class="mktviz-badge mktviz-badge-variant">V4</span>
+            <div class="mktviz-cell-name">Full-Stack AI Assistant</div>
+            <div class="mktviz-cell-desc">AI calls + project estimation + multi-location support. Unlimited users, 6–8 hrs/mo dedicated advisor, quarterly business review.</div>
+            <span class="mktviz-cell-vol">~15% of Construction customers</span>
+          </div>
+          <div class="mktviz-cell mktviz-cell-none">
+            <span class="mktviz-cell-none-dash">—</span>
+          </div>
+          <div class="mktviz-cell mktviz-cell-secondary">
+            <span class="mktviz-badge mktviz-badge-variant">V4</span>
+            <div class="mktviz-cell-name">Multi-Location Dispatch Suite</div>
+            <div class="mktviz-cell-desc">AI calls + route optimization + multi-branch crew dispatch. Unlimited users, 6–8 hrs/mo advisor, optional API integration support.</div>
+            <span class="mktviz-cell-vol">~15% of Cleaning customers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: V3 Pro -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">V3 &mdash; Pro</span>
+          <span class="mktviz-row-price">$299/mo</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-variant">V3</span>
+            <div class="mktviz-cell-name">AI Call + Project Mgmt</div>
+            <div class="mktviz-cell-desc">600 calls/mo, project estimation add-on, CRM &amp; calendar integrations, 2 hrs/mo live consultant, co-built 2–3 custom workflows.</div>
+            <span class="mktviz-cell-vol">~20% of Construction customers</span>
+          </div>
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-variant">V3</span>
+            <div class="mktviz-cell-name">Seasonal AI Assistant</div>
+            <div class="mktviz-cell-desc">600 calls/mo, seasonal surge workflow, event booking automation, 2 hrs/mo consultant, priority support + monthly video check-in.</div>
+            <span class="mktviz-cell-vol">~20% of Florist customers</span>
+          </div>
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-variant">V3</span>
+            <div class="mktviz-cell-name">AI Scheduling Engine</div>
+            <div class="mktviz-cell-desc">600 calls/mo, crew-aware smart scheduling add-on, CRM integrations, 2 hrs/mo consultant, reporting dashboard with crew metrics.</div>
+            <span class="mktviz-cell-vol">~20% of Cleaning customers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: V2 Starter -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">V2 &mdash; Starter</span>
+          <span class="mktviz-row-price">$99/mo</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-variant">V2</span>
+            <div class="mktviz-cell-name">Core AI Call Handling</div>
+            <div class="mktviz-cell-desc">150 calls/mo, 3 user seats, callback scheduling, SMS + email notifications, basic lead capture &amp; customer database.</div>
+            <span class="mktviz-cell-vol">~10% of Construction customers</span>
+          </div>
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-variant">V2</span>
+            <div class="mktviz-cell-name">Event Booking Bot</div>
+            <div class="mktviz-cell-desc">150 calls/mo, 3 user seats, order intake automation, appointment scheduling, customer follow-up &amp; seasonal calendar.</div>
+            <span class="mktviz-cell-vol">~5% of Florist customers</span>
+          </div>
+          <div class="mktviz-cell mktviz-cell-primary">
+            <span class="mktviz-badge mktviz-badge-variant">V2</span>
+            <div class="mktviz-cell-name">Smart Booking</div>
+            <div class="mktviz-cell-desc">150 calls/mo, 3 user seats, route-aware appointment booking, team assignment notifications &amp; customer database.</div>
+            <span class="mktviz-cell-vol">~10% of Cleaning customers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row: V1 Free -->
+      <div class="mktviz-row">
+        <div class="mktviz-row-label">
+          <span class="mktviz-row-tier">V1 &mdash; Explorer</span>
+          <span class="mktviz-row-price">Free</span>
+        </div>
+        <div class="mktviz-cells-row">
+          <div class="mktviz-cell mktviz-cell-none"><span class="mktviz-cell-none-dash">—</span></div>
+          <div class="mktviz-cell mktviz-cell-none"><span class="mktviz-cell-none-dash">—</span></div>
+          <div class="mktviz-cell mktviz-cell-none"><span class="mktviz-cell-none-dash">—</span></div>
+        </div>
+      </div>
+
+      <!-- X-axis labels -->
+      <div class="mktviz-x-row">
+        <div class="mktviz-x-spacer"></div>
+        <div class="mktviz-x-labels">
+          <div class="mktviz-x-label">Construction</div>
+          <div class="mktviz-x-label">Florist</div>
+          <div class="mktviz-x-label">Cleaning</div>
+        </div>
+        <div class="mktviz-x-title">Market Segment</div>
+      </div>
+
+      <p class="mktviz-note"><strong>Total variants:</strong> 3 distinct offerings (V2/V3/V4) across 3 segments = <strong>8 active product slots</strong> (Florist has no V4). V1 Explorer is a trial funnel, not a paid variant. Each cell variant reuses the shared platform core and adds only segment-specific logic.</p>
     </div>
 
-    <div class="stats-row">
-      <div class="stat-box">
-        <div class="stat-label">Year 1 ARR</div>
-        <div class="stat-number">$150K</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-label">Break-even</div>
-        <div class="stat-number">Year 1.5</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-label">Year 3 Target</div>
-        <div class="stat-number">$2M</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-label">Platform Margin</div>
-        <div class="stat-number">~85%</div>
-      </div>
-    </div>
-
-    <div class="warning-banner">
-      <strong>ⓘ</strong>
-      <span><strong>Projected figures throughout revenue, break-even timing, and 50% platform-margin assumption are estimates, not guarantees.</strong></span>
-    </div>
-
-    <p style="margin: 2rem 0; font-size: 14px; color: var(--text-gray);"><strong style="color: var(--primary);">Milestone sequence</strong></p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <strong>Year 1</strong>
-        <p>Construction launch; core Phone Assist reaches trial customers. <strong style="color: var(--primary);">~$150K ARR projected.</strong></p>
-      </div>
-      <div class="timeline-item">
-        <strong>Year 1.5</strong>
-        <p>Projected break-even. Project Estimation variant attaches to the construction base.</p>
-      </div>
-      <div class="timeline-item">
-        <strong>Year 2</strong>
-        <p>Florist and Cleaning expansion; Smart Scheduling and Seasonal Assist variants launch. <strong style="color: var(--primary);">~$600K ARR projected.</strong></p>
-      </div>
-      <div class="timeline-item">
-        <strong>Year 2.5</strong>
-        <p>Multi-Location variant for cleaning operators with multiple branches.</p>
-      </div>
-      <div class="timeline-item">
-        <strong>Year 3</strong>
-        <p>Stated <strong style="color: var(--primary);">$2M ARR</strong> milestone as variant adoption compounds across three segments.</p>
-      </div>
-      <div class="timeline-item">
-        <strong>Years 4–5</strong>
-        <p>Multi-segment scale toward $3.2M–$4.5M+ ARR on a maturing platform.</p>
-      </div>
-    </div>
-
-    <div class="highlight-box">
-      <p><strong>Unit economics insight:</strong> Year 1.5 break-even is feasible because variants have ~85% gross margin (core AI amortized). A small cohort of variant-paying customers can offset core platform R&D; as segments scale, margin stays strong.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Decision 7: Variants -->
-<section>
-  <div class="container">
-    <div class="section-header">
-      <p class="decision-label">Decision 07 of 08</p>
-      <h2 class="section-title">Expected Variants & Adoption</h2>
-      <p class="section-subtitle">Five offerings, one platform: each variant reuses the core and adds unique logic only where needed.</p>
-    </div>
-
-    <div class="warning-banner">
-      <strong>ⓘ</strong>
-      <span><strong>Adoption counts, attach rates, and revenue shares are projections, not guarantees.</strong></span>
-    </div>
+    <!-- Volume Summary -->
+    <p style="margin: 2.5rem 0 1rem; font-size: 14px; color: var(--text-gray);"><strong style="color: var(--primary);">Estimated total volume sold (Year 3 projection)</strong></p>
 
     <table>
       <thead>
         <tr>
           <th>Variant</th>
-          <th>Launch</th>
-          <th>Segment(s)</th>
-          <th>Projected Adoption</th>
-          <th>Revenue Share</th>
-          <th>Focus</th>
+          <th>Construction</th>
+          <th>Florist</th>
+          <th>Cleaning</th>
+          <th>Platform Total (fraction)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Core SkillMate</strong> <span style="background: var(--accent); color: white; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 11px; margin-left: 0.5rem;">CORE</span></td>
-          <td>Year 1</td>
-          <td>Construction</td>
-          <td>~500 customers</td>
-          <td>45%</td>
-          <td>Phone Assist</td>
+          <td><strong>V4 Enterprise</strong></td>
+          <td>~75 customers (15%)</td>
+          <td style="color: var(--text-gray);">—</td>
+          <td>~60 customers (15%)</td>
+          <td><strong>~135 customers &asymp; 11% of platform</strong></td>
         </tr>
         <tr>
-          <td><strong>Project Estimation</strong></td>
-          <td>Year 1.5</td>
-          <td>Construction</td>
-          <td>~100 add-ons (20%)</td>
-          <td>15%</td>
-          <td>Estimate templates</td>
+          <td><strong>V3 Pro</strong></td>
+          <td>~100 customers (20%)</td>
+          <td>~60 customers (20%)</td>
+          <td>~80 customers (20%)</td>
+          <td><strong>~240 customers &asymp; 20% of platform</strong></td>
         </tr>
         <tr>
-          <td><strong>Smart Scheduling</strong></td>
-          <td>Year 2</td>
-          <td>Construction & Cleaning</td>
-          <td>~150 add-ons (30%)</td>
-          <td>20%</td>
-          <td>Crew-aware booking</td>
+          <td><strong>V2 Starter</strong></td>
+          <td>~50 customers (10%)</td>
+          <td>~15 customers (5%)</td>
+          <td>~40 customers (10%)</td>
+          <td><strong>~105 customers &asymp; 9% of platform</strong></td>
         </tr>
         <tr>
-          <td><strong>Seasonal Assist</strong></td>
-          <td>Year 2</td>
-          <td>Florist</td>
-          <td>~50 add-ons</td>
-          <td>10%</td>
-          <td>Peak-season logic</td>
+          <td><strong>V1 Explorer</strong></td>
+          <td colspan="3" style="text-align: center; color: var(--text-gray); font-style: italic;">Trial funnel — not a paid variant</td>
+          <td><strong>—</strong></td>
         </tr>
-        <tr>
-          <td><strong>Multi-Location</strong></td>
-          <td>Year 2.5</td>
-          <td>Cleaning</td>
-          <td>~30 add-ons</td>
-          <td>10%</td>
-          <td>Branch dispatch</td>
+        <tr style="background: var(--primary-light);">
+          <td><strong>Total paying</strong></td>
+          <td><strong>~225 (45%)</strong></td>
+          <td><strong>~75 (25%)</strong></td>
+          <td><strong>~180 (45%)</strong></td>
+          <td><strong>~480 customers &asymp; 40% conversion</strong></td>
         </tr>
       </tbody>
     </table>
 
-    <div class="highlight-box" style="background: #1e3a5f; border-color: #1e3a5f; color: white;">
-      <p style="color: white;"><strong style="color: #e8f0f8;">Reuse first, unique logic last:</strong> Every variant rides on the same AI Call Engine, scheduling, customer database, and integrations. Unique code exists only where a segment's economics demand it—estimation for construction, forecasting for florists, dispatch for cleaning. That discipline is what lets a small team ship five offerings without proportional complexity.</p>
+    <div class="warning-banner">
+      <strong>&#9432;</strong>
+      <span><strong>All volume figures are Year 3 projections based on estimated segment sizes (~500 Construction, ~300 Florist, ~400 Cleaning). Not guarantees.</strong></span>
     </div>
   </div>
 </section>
+<!-- Decision 7: Planning Horizon -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <p class="decision-label">Decision 07 of 08</p>
+      <h2 class="section-title">Planning Horizon &amp; Architectural Stability</h2>
+      <p class="section-subtitle">A 2&ndash;3 year planning horizon &mdash; shorter than a typical hardware platform because AI moves too fast for a longer architectural bet.</p>
+    </div>
 
-<!-- Decision 8: DSM -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-label">Planning Horizon</div>
+        <div class="stat-number">2&ndash;3 Yrs</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Platform Foundation</div>
+        <div class="stat-number">Stable</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">AI Tool Layer</div>
+        <div class="stat-number">Flexible</div>
+      </div>
+    </div>
+
+    <div class="two-col-grid">
+      <div class="architecture-box" style="border-top: 3px solid var(--primary);">
+        <div class="architecture-title">Keep Stable &mdash; Platform Foundation</div>
+        <p style="font-size: 12px; color: var(--text-gray); margin-bottom: 1rem;">Core infrastructure that must remain consistent so every segment, variant, and integration can rely on it without disruption.</p>
+        <div class="architecture-items">
+          <div class="architecture-item">Customer Account</div>
+          <div class="architecture-item">Subscription &amp; Billing</div>
+          <div class="architecture-item">AI Call Catalog Structure</div>
+          <div class="architecture-item">Recommendation Framework</div>
+          <div class="architecture-item">Workflow Architecture</div>
+          <div class="architecture-item">Customer Data &amp; Permissions</div>
+        </div>
+      </div>
+      <div class="architecture-box" style="border-top: 3px solid var(--accent);">
+        <div class="architecture-title">Keep Flexible &mdash; AI Tool Layer</div>
+        <p style="font-size: 12px; color: var(--text-gray); margin-bottom: 1rem;">Replaceable without touching the platform &mdash; plug in better models or vendors as they emerge, without rebuilding the core.</p>
+        <div class="architecture-items">
+          <div class="architecture-item">AI Vendors &amp; Models</div>
+          <div class="architecture-item">APIs &amp; Pricing</div>
+          <div class="architecture-item">Individual AI Tools</div>
+          <div class="architecture-item">Tool Bundles</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin: 2rem 0 1rem; font-size: 14px; color: var(--text-gray);"><strong style="color: var(--primary);">Launch Plan</strong></p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <strong>0&ndash;6 Months &mdash; Pilot Phase</strong>
+        <p>Launch V1 (Explorer): Acquire initial Construction clients. Prove core AI call handling, validate willingness to pay, and surface early workflow gaps.</p>
+      </div>
+      <div class="timeline-item">
+        <strong>Year 0.5&ndash;1.5 &mdash; Growth Phase</strong>
+        <p>Launch V2 &amp; V3 (Starter &amp; Pro). Expand to Florist and Cleaning. Grow AI tool vendor partnerships and introduce live consultant service hours.</p>
+      </div>
+      <div class="timeline-item">
+        <strong>Year 1.5&ndash;3 &mdash; Scale Phase</strong>
+        <p>Launch V4 (Enterprise). Enable multi-location and API gateway support. Pursue advanced AI integrations, workflow optimization across all three segments, and premium subscription growth.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="background: #1e3a5f; border-color: #1e3a5f; color: white;">
+      <p style="color: white;"><strong style="color: #e8f0f8;">Strategic principle:</strong> Stable platform architecture + replaceable AI tool layer. When a better AI model or cheaper API emerges, swap the tool &mdash; not the platform. The 2&ndash;3 year horizon is short enough to stay honest about AI uncertainty and long enough to build a real business.</p>
+    </div>
+  </div>
+</section>
+<!-- Decision 8: Sharing Strategy -->
 <section>
   <div class="container">
     <div class="section-header">
       <p class="decision-label">Decision 08 of 08</p>
-      <h2 class="section-title">Shared Parts Architecture (DSM)</h2>
-      <p class="section-subtitle">A design-structure view of the platform: how much of each layer is shared, and why that discipline limits variant sprawl.</p>
+      <h2 class="section-title">Define Sharing Strategy</h2>
+      <p class="section-subtitle">Share at the platform-module level: every customer benefits from infrastructure improvements, while their data and workflows remain fully isolated.</p>
     </div>
 
-    <p style="margin: 1.5rem 0; font-size: 14px; color: var(--text-gray);">Each layer defines what is reusable and what is segment or variant-specific. This prevents variants from drifting into forks.</p>
+    <p style="margin: 1.5rem 0; font-size: 14px; color: var(--text-gray);">At what hierarchy level? Which modules are shared? &rarr; Share at the <strong style="color: var(--primary);">platform-module level</strong>. One platform core &mdash; customer data never crosses boundaries.</p>
 
-    <div class="architecture-box">
-      <div class="architecture-title">✓ Whole Product (100% Shared)</div>
-      <p style="font-size: 12px; color: var(--text-gray); margin-bottom: 1rem;">Fully shared. Every customer, every segment, every variant runs on the same foundation.</p>
-      <div class="architecture-items">
-        <div class="architecture-item">Cloud Infrastructure</div>
-        <div class="architecture-item">Authentication & Security</div>
-        <div class="architecture-item">User Management</div>
+    <p style="margin: 2rem 0 1rem; font-size: 14px; color: var(--text-gray);"><strong style="color: var(--primary);">Shared Across All Customers</strong></p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 1.5rem 0;">
+      <div class="architecture-box">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <span style="background: var(--primary); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0;">1</span>
+          <div class="architecture-title" style="margin: 0;">AI Tool Catalog</div>
+        </div>
+        <p style="font-size: 12px; color: var(--text-gray); line-height: 1.7;">Tool capabilities, use cases, pricing, and integration info &mdash; shared so every segment benefits immediately when new AI tools are added.</p>
+      </div>
+      <div class="architecture-box">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <span style="background: var(--primary); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0;">2</span>
+          <div class="architecture-title" style="margin: 0;">Recommendation Engine</div>
+        </div>
+        <p style="font-size: 12px; color: var(--text-gray); line-height: 1.7;">Need &rarr; capability &rarr; tool matching. One engine continuously improved by aggregated usage data across all segments and customers.</p>
+      </div>
+      <div class="architecture-box">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <span style="background: var(--primary); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0;">3</span>
+          <div class="architecture-title" style="margin: 0;">Workflow Library</div>
+        </div>
+        <p style="font-size: 12px; color: var(--text-gray); line-height: 1.7;">Reusable workflow templates, best practices, and playbooks &mdash; built once, deployed across Construction, Florist, and Cleaning with segment configuration.</p>
+      </div>
+      <div class="architecture-box">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <span style="background: var(--primary); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0;">4</span>
+          <div class="architecture-title" style="margin: 0;">Platform Infrastructure</div>
+        </div>
+        <p style="font-size: 12px; color: var(--text-gray); line-height: 1.7;">Account management, billing, analytics, and support framework &mdash; one system serving every customer, variant, and segment on the platform.</p>
       </div>
     </div>
 
-    <div class="architecture-box">
-      <div class="architecture-title">⊞ Major Assemblies (80% Shared)</div>
-      <p style="font-size: 12px; color: var(--text-gray); margin-bottom: 1rem;">Shared with segment-configuration. The assemblies are common; templates and rules vary per segment.</p>
-      <div class="architecture-items">
-        <div class="architecture-item">AI Call Engine</div>
-        <div class="architecture-item">Scheduling Engine</div>
-        <div class="architecture-item">Customer Database</div>
-        <div class="architecture-item">Notification System</div>
-      </div>
-    </div>
-
-    <div class="architecture-box">
-      <div class="architecture-title">◆ Components (40% Shared)</div>
-      <p style="font-size: 12px; color: var(--text-gray); margin-bottom: 1rem;">Loosely coupled. Common wiring; segment-specific integrations and reporting.</p>
-      <div class="architecture-items">
-        <div class="architecture-item">CRM Integrations</div>
-        <div class="architecture-item">Calendar Sync</div>
-        <div class="architecture-item">Payment Processing</div>
-        <div class="architecture-item">Reporting Dashboard</div>
-      </div>
-    </div>
-
-    <div class="architecture-box">
-      <div class="architecture-title">✗ Variant-Specific (0% Shared)</div>
-      <p style="font-size: 12px; color: var(--text-gray); margin-bottom: 1rem;">Built once per variant; sold as add-ons across segments where demand exists. No forking.</p>
-      <div class="architecture-items">
-        <div class="architecture-item">Project Estimation Engine</div>
-        <div class="architecture-item">Seasonal Forecasting</div>
-        <div class="architecture-item">Multi-Location Dispatch</div>
-        <div class="architecture-item">Route Optimization</div>
+    <div class="highlight-box" style="background: #fffbeb; border-left-color: var(--accent); margin: 2rem 0;">
+      <p><strong style="color: var(--accent-dark);">Not Shared &mdash; Customer-Specific Layer</strong></p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.875rem;">
+        <span style="background: white; border: 1px solid #fde68a; border-radius: 20px; padding: 0.3rem 0.875rem; font-size: 12px; color: var(--text-mid); font-weight: 500;">Customer Profile</span>
+        <span style="background: white; border: 1px solid #fde68a; border-radius: 20px; padding: 0.3rem 0.875rem; font-size: 12px; color: var(--text-mid); font-weight: 500;">Business Data</span>
+        <span style="background: white; border: 1px solid #fde68a; border-radius: 20px; padding: 0.3rem 0.875rem; font-size: 12px; color: var(--text-mid); font-weight: 500;">Customized Workflows</span>
+        <span style="background: white; border: 1px solid #fde68a; border-radius: 20px; padding: 0.3rem 0.875rem; font-size: 12px; color: var(--text-mid); font-weight: 500;">Usage History</span>
+        <span style="background: white; border: 1px solid #fde68a; border-radius: 20px; padding: 0.3rem 0.875rem; font-size: 12px; color: var(--text-mid); font-weight: 500;">Proprietary Business Information</span>
       </div>
     </div>
 
     <div class="highlight-box" style="background: #1e3a5f; border-color: #1e3a5f; color: white;">
-      <p style="color: white;"><strong style="color: #e8f0f8;">The dependency insight:</strong> Dependency ties downward: variant-specific modules depend on components, which depend on major assemblies, which depend on the whole product. Whole product is depended upon by everyone else. That hierarchy prevents variants from modifying core and forces discipline: if you need to change the AI Call Engine for one segment, you change it for all. If the change is segment-specific, build a variant, not a fork.</p>
+      <p style="color: white;"><strong style="color: #e8f0f8;">The sharing insight:</strong> Dependency flows downward &mdash; customer-specific layers depend on shared modules, never the reverse. Improvements to the Recommendation Engine or Workflow Library benefit every customer simultaneously. Customer data stays isolated; platform intelligence grows collectively.</p>
     </div>
 
     <div class="highlight-box">
-      <p><strong>Result:</strong> One codebase. Minimal fork risk. Every customer and segment benefits from core fixes and improvements. Variants grow as add-ons, not branches.</p>
+      <p><strong>Result:</strong> One platform core. Customer data fully isolated. Every segment benefits from catalog improvements, model upgrades, and workflow additions without sharing what should stay private.</p>
     </div>
   </div>
 </section>
